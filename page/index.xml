@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on rniwase.github.io</title>
+    <link>https://rniwase.github.io/page/</link>
+    <description>Recent content in Pages on rniwase.github.io</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sat, 09 May 2020 01:12:23 +0900</lastBuildDate>
+    
+	<atom:link href="https://rniwase.github.io/page/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Todoリスト</title>
+      <link>https://rniwase.github.io/page/todolist/</link>
+      <pubDate>Sat, 09 May 2020 01:12:23 +0900</pubDate>
+      
+      <guid>https://rniwase.github.io/page/todolist/</guid>
+      <description>やりたいこと  XMOS xCORE-200 eXplorerKITでUSB Audio Deviceを動かす XMOS xCORE-200 eXplorerKITでEthernet AVBを動かす DE10-NanoでLinuxを動かす 3340 VCOの設計データを公開する Eurorackのオープンラックケースを作る Eurorack用の簡易電源を作る EurorackにマウントできるVUメータを作る RPi向けビデオデコーダ(ADV7280-M)ブレークアウト基板の設計データを公開する  記事にまとめたいもの  Petalinux on Zynqberry Lattice iCE40 UltraPlusでGameBoyのROMカートリッジを実装する  読みたいもの  GitHub実践入門  </description>
+    </item>
+    
+  </channel>
+</rss>
