@@ -3,12 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://rniwase.github.io/page/</loc>
-    <lastmod>2020-05-09T01:12:23+09:00</lastmod>
+    <loc>https://rniwase.github.io/post/</loc>
+    <lastmod>2020-06-14T07:51:50+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://rniwase.github.io/</loc>
+    <lastmod>2020-06-14T07:51:50+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rniwase.github.io/2020/06/how-to-setup-vnc/</loc>
+    <lastmod>2020-06-14T07:51:50+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rniwase.github.io/page/</loc>
     <lastmod>2020-05-09T01:12:23+09:00</lastmod>
   </url>
   
@@ -18,12 +28,7 @@
   </url>
   
   <url>
-    <loc>https://rniwase.github.io/post/</loc>
-    <lastmod>2020-05-08T04:09:36+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rniwase.github.io/2020/05/profile/</loc>
+    <loc>https://rniwase.github.io/page/profile/</loc>
     <lastmod>2020-05-08T04:09:36+09:00</lastmod>
   </url>
   

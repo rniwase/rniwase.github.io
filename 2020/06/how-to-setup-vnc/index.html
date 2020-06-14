@@ -8,25 +8,25 @@
 <meta name="generator" content="Hugo 0.70.0 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Ryohei Niwase">
 <meta name="keywords" content="">
-<meta name="description" content=" XMOS xCORE-200 eXplorerKITでUSB Audio Deviceを動かす XMOS xCORE-200 eXplorerKITでEthernet AVBを動かす DE10-NanoでLinuxを動かす 3340 VCOの設計データを公開する Eurorackのオープンラックケースを作る Eurorack用の簡易電源を作る EurorackにマウントできるVUメータを作る RPi向けビデオデコーダ(ADV7280-M)ブレークアウト基板の設計データを公開する AK4490EQを試す LME49600TS試す ZynqberryでPetaLinux動かす方法をまとめる Lattice iCE40 UltraPlusでGameBoyのROMカートリッジを実装する方法をまとめる GitHub実践入門読む  ">
+<meta name="description" content="ヘッドレス運用の開発マシンをセットアップするとき、VNCサーバの設定方法をよく忘れるのでメモ。">
 
 
-<meta property="og:description" content=" XMOS xCORE-200 eXplorerKITでUSB Audio Deviceを動かす XMOS xCORE-200 eXplorerKITでEthernet AVBを動かす DE10-NanoでLinuxを動かす 3340 VCOの設計データを公開する Eurorackのオープンラックケースを作る Eurorack用の簡易電源を作る EurorackにマウントできるVUメータを作る RPi向けビデオデコーダ(ADV7280-M)ブレークアウト基板の設計データを公開する AK4490EQを試す LME49600TS試す ZynqberryでPetaLinux動かす方法をまとめる Lattice iCE40 UltraPlusでGameBoyのROMカートリッジを実装する方法をまとめる GitHub実践入門読む  ">
+<meta property="og:description" content="ヘッドレス運用の開発マシンをセットアップするとき、VNCサーバの設定方法をよく忘れるのでメモ。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Todoリスト">
-<meta name="twitter:title" content="Todoリスト">
-<meta property="og:url" content="https://rniwase.github.io/page/todolist/">
-<meta property="twitter:url" content="https://rniwase.github.io/page/todolist/">
+<meta property="og:title" content="VNCサーバ設定と接続手順">
+<meta name="twitter:title" content="VNCサーバ設定と接続手順">
+<meta property="og:url" content="https://rniwase.github.io/2020/06/how-to-setup-vnc/">
+<meta property="twitter:url" content="https://rniwase.github.io/2020/06/how-to-setup-vnc/">
 <meta property="og:site_name" content="rniwase.github.io">
-<meta property="og:description" content=" XMOS xCORE-200 eXplorerKITでUSB Audio Deviceを動かす XMOS xCORE-200 eXplorerKITでEthernet AVBを動かす DE10-NanoでLinuxを動かす 3340 VCOの設計データを公開する Eurorackのオープンラックケースを作る Eurorack用の簡易電源を作る EurorackにマウントできるVUメータを作る RPi向けビデオデコーダ(ADV7280-M)ブレークアウト基板の設計データを公開する AK4490EQを試す LME49600TS試す ZynqberryでPetaLinux動かす方法をまとめる Lattice iCE40 UltraPlusでGameBoyのROMカートリッジを実装する方法をまとめる GitHub実践入門読む  ">
-<meta name="twitter:description" content=" XMOS xCORE-200 eXplorerKITでUSB Audio Deviceを動かす XMOS xCORE-200 eXplorerKITでEthernet AVBを動かす DE10-NanoでLinuxを動かす 3340 VCOの設計データを公開する Eurorackのオープンラックケースを作る Eurorack用の簡易電源を作る EurorackにマウントできるVUメータを作る RPi向けビデオデコーダ(ADV7280-M)ブレークアウト基板の設計データを公開する AK4490EQを試す LME49600TS試す ZynqberryでPetaLinux動かす方法をまとめる Lattice iCE40 UltraPlusでGameBoyのROMカートリッジを実装する方法をまとめる GitHub実践入門読む  ">
+<meta property="og:description" content="ヘッドレス運用の開発マシンをセットアップするとき、VNCサーバの設定方法をよく忘れるのでメモ。">
+<meta name="twitter:description" content="ヘッドレス運用の開発マシンをセットアップするとき、VNCサーバの設定方法をよく忘れるのでメモ。">
 <meta property="og:locale" content="ja">
 
   
-    <meta property="article:published_time" content="2020-05-09T01:12:23">
+    <meta property="article:published_time" content="2020-06-14T07:51:50">
   
   
-    <meta property="article:modified_time" content="2020-05-09T01:12:23">
+    <meta property="article:modified_time" content="2020-06-14T07:51:50">
   
   
   
@@ -49,14 +49,14 @@
   <meta property="twitter:image" content="https://rniwase.github.io/avatar.jpg">
 
 
-    <title>Todoリスト</title>
+    <title>VNCサーバ設定と接続手順</title>
 
     <link rel="icon" href="https://rniwase.github.io/favicon.png">
     
 
     
 
-    <link rel="canonical" href="https://rniwase.github.io/page/todolist/">
+    <link rel="canonical" href="https://rniwase.github.io/2020/06/how-to-setup-vnc/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -166,19 +166,19 @@
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      Todoリスト
+      VNCサーバ設定と接続手順
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2020-05-09T01:12:23&#43;09:00">
+      <time itemprop="datePublished" datetime="2020-06-14T07:51:50&#43;09:00">
         
   
   
   
   
-    2020-05-09
+    2020-06-14
   
 
       </time>
@@ -190,22 +190,124 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <ul>
-<li>XMOS xCORE-200 eXplorerKITでUSB Audio Deviceを動かす</li>
-<li>XMOS xCORE-200 eXplorerKITでEthernet AVBを動かす</li>
-<li>DE10-NanoでLinuxを動かす</li>
-<li>3340 VCOの設計データを公開する</li>
-<li>Eurorackのオープンラックケースを作る</li>
-<li>Eurorack用の簡易電源を作る</li>
-<li>EurorackにマウントできるVUメータを作る</li>
-<li>RPi向けビデオデコーダ(ADV7280-M)ブレークアウト基板の設計データを公開する</li>
-<li>AK4490EQを試す</li>
-<li>LME49600TS試す</li>
-<li>ZynqberryでPetaLinux動かす方法をまとめる</li>
-<li>Lattice iCE40 UltraPlusでGameBoyのROMカートリッジを実装する方法をまとめる</li>
-<li>GitHub実践入門読む</li>
+              <p>ヘッドレス運用の開発マシンをセットアップするとき、VNCサーバの設定方法をよく忘れるのでメモ。</p>
+<h3 id="vncサーバ設定">VNCサーバ設定</h3>
+<ul>
+<li>OS: Ubuntu Server 18.04</li>
 </ul>
+<ol>
+<li>
+<p>環境のインストール
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ sudo apt update
+$ sudo apt install xfce4 xfce4-goodies tightvncserver firefox</code></pre></div></p>
+</li>
+<li>
+<p>VNC接続パスワードの設定
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ vncpasswd
+Using password file /home/&lt;ユーザ名&gt;/.vnc/passwd
+VNC directory /home/&lt;ユーザ名&gt;/.vnc does not exist, creating.
+Password:
+Verify:
+Would you like to enter a view-only password <span class="o">(</span>y/n<span class="o">)</span>? n</code></pre></div>
+パスワードは9文字以上だと<code>Warning: password truncated to the length of 8.</code>と表示されて8文字に短縮されるので注意。</p>
+</li>
+<li>
+<p>VNCサーバを起動
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ vncserver
+xauth:  file /home/&lt;ユーザ名&gt;/.Xauthority does not exist
 
+New <span class="s1">&#39;X&#39;</span> desktop is &lt;ホスト名&gt;:&lt;ディスプレイ番号&gt;
+
+Creating default startup script /home/&lt;ユーザ名&gt;/.vnc/xstartup
+Starting applications specified in /home/&lt;ユーザ名&gt;/.vnc/xstartup
+Log file is /home/&lt;ユーザ名&gt;/.vnc/&lt;ホスト名&gt;:&lt;ディスプレイ番号&gt;.log</code></pre></div>
+サーバは初回起動時にホームディレクトリ内で<code>.vnc</code>や<code>.Xauthority</code>などのファイルを生成する。
+他にVNCサーバを起動しているユーザがいなければ、ディスプレイ番号は1になる。
+他のユーザが特にディスプレイ番号を指定せずVNCサーバを起動していくと2, 3&hellip;と順番にディスプレイ番号が増える。</p>
+</li>
+<li>
+<p>設定ファイルを編集する
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ vncserver -kill :&lt;ディスプレイ番号&gt;</code></pre></div>
+で一度VNCサーバを閉じて
+<code>~/.vnc/xsetup</code>を次のように編集する（そのままだとアイコンが表示されなかったりする）。
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="cp">#!/bin/bash
+</span><span class="cp"></span>xrdb <span class="nv">$HOME</span>/.Xresources
+startxfce4 <span class="p">&amp;</span></code></pre></div>
+再度VNCサーバを起動する。
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ vncserver</code></pre></div></p>
+</li>
+</ol>
+<ul>
+<li>運用方法<br>
+OSを再起動したときユーザは<code>vncserver</code>コマンドを叩いて再度VNCサーバを起動する必要がある。<br>
+画面の解像度と色深度を変更したい場合、以下のようにサーバ起動時に設定する。<br>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ vncserver -depth <span class="m">24</span> -geometry 1920x1080</code></pre></div></li>
+</ul>
+<h3 id="クライアント接続手順">クライアント接続手順</h3>
+<h6 id="ubuntu-desktop-1804">Ubuntu Desktop 18.04</h6>
+<p><a href="https://remmina.org/">Remmina</a>というリモートデスクトップクライアントが標準でインストールされているのでこれを使う。</p>
+<ol>
+<li>Remminaを起動する。</li>
+<li>＋ボタンを押す</li>
+<li>次のように各項目を設定する。</li>
+</ol>
+<ul>
+<li><code>Name</code> : <code>&lt;適当な表示名&gt;</code></li>
+<li><code>Protocol</code> : <code>VNC - Virtual Network Computing</code></li>
+<li><code>Server</code> : <code>&lt;接続先アドレス&gt;:&lt;ポート番号&gt;</code> (&lt;ポート番号&gt;=5900+&lt;ディスプレイ番号&gt;)<br>
+例 : <code>192.168.1.100:5901</code></li>
+<li><code>User password</code> : <code>&lt;vncpasswdで設定したパスワード&gt;</code></li>
+<li><code>Color depth</code> : <code>True color (24 bpp)</code></li>
+<li><code>Quality</code> : <code>Medium</code></li>
+</ul>
+<ol start="4">
+<li><code>Save and Connect</code>を押す。</li>
+<li>接続が確立するとリモート画面が表示される。<br>
+次回以降は一覧に表示された項目をダブルクリックすると接続できるようになる。</li>
+</ol>
+<h6 id="macos">macOS</h6>
+<p>OS標準のクライアントを使う。</p>
+<ol>
+<li>Finderを開いて、<code>メニュー -&gt; 移動 -&gt; サーバへ接続...</code>を押す。</li>
+<li>サーバアドレスに<code>vnc://&lt;接続先アドレス&gt;:&lt;ポート番号&gt;/</code>を入力して接続を押す(<code>&lt;ポート番号&gt;=5900+&lt;ディスプレイ番号&gt;</code>)。<br>
+例 : <code>vnc://192.168.1.100:5901/</code></li>
+<li>画面共有が起動してパスワードを聞かれるので、<code>vncpasswd</code>で設定したパスワードを入力して接続を押す。</li>
+<li>接続が確立するとリモート画面が表示される。</li>
+</ol>
+<h6 id="windows">Windows</h6>
+<p><a href="https://realvnc.com/en/connect/download/viewer/windows/">RealVNC VNC Viewer</a>を使う。</p>
+<ol>
+<li>VNC Viewerをダウンロードしてインストールする。</li>
+<li>VNC Viewerを起動する。</li>
+<li><code>Enter a VNC Server address or search</code>に<code>&lt;接続先アドレス&gt;:&lt;ポート番号&gt;</code>を入力して接続を押す(<code>&lt;ポート番号&gt;=5900+&lt;ディスプレイ番号&gt;</code>)。<br>
+例 : <code>192.168.1.100:5901</code></li>
+<li><code>Unencrypted connection</code>という警告ウィンドウが出るので<code>Continue</code>を押して続行する。</li>
+<li>パスワードを聞かれるので、<code>vncpasswd</code>で設定したパスワードを入力して<code>OK</code>を押す。</li>
+<li>接続が確立するとリモート画面が表示される。<br>
+次回以降は一覧に表示された項目をダブルクリックすると接続できるようになる。</li>
+</ol>
+<h6 id="初回接続時">初回接続時</h6>
+<p>初回接続時に<code>Welcome to the first start of the panel</code>というウィンドウが表示されるので<code>Use default config</code>を押して閉じる。<br>
+もしWebブラウザ、ターミナルのアイコンを押しても起動しなければ、
+<code>Applications -&gt; Settings -&gt; Preferred Applications</code>を開いて
+<code>Internetタブ -&gt; Web Browser</code>が<code>Mozilla Firefox</code>に、
+<code>Utilitiesタブ -&gt; Terminal Emulator</code>が<code>Xfce Terminal</code>に設定されているか確認する。</p>
+<h4 id="セキュリティについて">セキュリティについて</h4>
+<p>VNCプロトコルでは映像の転送が暗号化されていないので、そのままだと通信内容から映像を傍受できてしまう。
+通信を暗号化するにはSSHのポートフォワーディング機能を使う。</p>
+<p>具体的には、クライアントからサーバに対してSSHでログインできる状態で、
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ ssh &lt;ユーザ名&gt;@&lt;接続先アドレス&gt; -L &lt;ポート番号&gt;:localhost:&lt;ポート番号&gt; -f -N
+例 :
+$ ssh user@192.168.1.100 -L 5901:localhost:5901 -f -N</code></pre></div>
+をターミナルで実行したあとに、VNCクライアントで<code>localhost:&lt;ポート番号&gt;</code>に接続するとVNC over SSHが実現できる。</p>
+<p>VNCクライアントによっては接続時にSSHポートフォワーディングを設定してくれる機能を持つものもある。<br>
+例えば、Remminaだと設定画面の<code>SSH Tunnel</code>タブで</p>
+<ul>
+<li><code>Enable SSH tunnel</code>にチェックを入れる。</li>
+<li><code>SSH Authentication</code>の<code>User name</code>にログインユーザ名を入れる。</li>
+<li>パスワード認証なら<code>Password</code>にチェック、公開鍵認証なら<code>Public key(automatic)</code>にチェックをいれる。</li>
+</ul>
+<p>と設定すると、接続するときに自動的にSSHポートフォワーディングを設定してくれる。</p>
               
             </div>
           </div>
@@ -228,7 +330,7 @@
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://rniwase.github.io/page/profile/" data-tooltip="プロフィール">
+                <a class="post-action-btn btn btn--disabled">
               
                   <span class="hide-xs hide-sm text-small icon-mr">前</span>
                   <i class="fa fa-angle-right"></i>
@@ -246,19 +348,19 @@
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://rniwase.github.io/page/todolist/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://rniwase.github.io/2020/06/how-to-setup-vnc/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://rniwase.github.io/page/todolist/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://rniwase.github.io/2020/06/how-to-setup-vnc/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://rniwase.github.io/page/todolist/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://rniwase.github.io/2020/06/how-to-setup-vnc/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -314,7 +416,7 @@
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://rniwase.github.io/page/profile/" data-tooltip="プロフィール">
+                <a class="post-action-btn btn btn--disabled">
               
                   <span class="hide-xs hide-sm text-small icon-mr">前</span>
                   <i class="fa fa-angle-right"></i>
@@ -332,19 +434,19 @@
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://rniwase.github.io/page/todolist/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://rniwase.github.io/2020/06/how-to-setup-vnc/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://rniwase.github.io/page/todolist/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://rniwase.github.io/2020/06/how-to-setup-vnc/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://rniwase.github.io/page/todolist/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://rniwase.github.io/2020/06/how-to-setup-vnc/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -374,19 +476,19 @@
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Frniwase.github.io%2Fpage%2Ftodolist%2F">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Frniwase.github.io%2F2020%2F06%2Fhow-to-setup-vnc%2F">
           <i class="fa fa-facebook-official"></i><span>Facebookで共有</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Frniwase.github.io%2Fpage%2Ftodolist%2F">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Frniwase.github.io%2F2020%2F06%2Fhow-to-setup-vnc%2F">
           <i class="fa fa-twitter"></i><span>Twitterで共有</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Frniwase.github.io%2Fpage%2Ftodolist%2F">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Frniwase.github.io%2F2020%2F06%2Fhow-to-setup-vnc%2F">
           <i class="fa fa-google-plus"></i><span>Google&#43;で共有</span>
         </a>
       </li>
@@ -478,9 +580,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/rniwase.github.io\/page\/todolist\/';
+          this.page.url = 'https:\/\/rniwase.github.io\/2020\/06\/how-to-setup-vnc\/';
           
-            this.page.identifier = '\/page\/todolist\/'
+            this.page.identifier = '\/2020\/06\/how-to-setup-vnc\/'
           
         };
         (function() {

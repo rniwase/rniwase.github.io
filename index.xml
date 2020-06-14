@@ -6,10 +6,19 @@
     <description>Recent content on rniwase.github.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sat, 09 May 2020 01:12:23 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 14 Jun 2020 07:51:50 +0900</lastBuildDate>
     
 	<atom:link href="https://rniwase.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>VNCサーバ設定と接続手順</title>
+      <link>https://rniwase.github.io/2020/06/how-to-setup-vnc/</link>
+      <pubDate>Sun, 14 Jun 2020 07:51:50 +0900</pubDate>
+      
+      <guid>https://rniwase.github.io/2020/06/how-to-setup-vnc/</guid>
+      <description>&lt;p&gt;ヘッドレス運用の開発マシンをセットアップするとき、VNCサーバの設定方法をよく忘れるのでメモ。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Todoリスト</title>
@@ -17,15 +26,15 @@
       <pubDate>Sat, 09 May 2020 01:12:23 +0900</pubDate>
       
       <guid>https://rniwase.github.io/page/todolist/</guid>
-      <description>やりたいこと  XMOS xCORE-200 eXplorerKITでUSB Audio Deviceを動かす XMOS xCORE-200 eXplorerKITでEthernet AVBを動かす DE10-NanoでLinuxを動かす 3340 VCOの設計データを公開する Eurorackのオープンラックケースを作る Eurorack用の簡易電源を作る EurorackにマウントできるVUメータを作る RPi向けビデオデコーダ(ADV7280-M)ブレークアウト基板の設計データを公開する  記事にまとめたいもの  Petalinux on Zynqberry Lattice iCE40 UltraPlusでGameBoyのROMカートリッジを実装する  読みたいもの  GitHub実践入門  </description>
+      <description> XMOS xCORE-200 eXplorerKITでUSB Audio Deviceを動かす XMOS xCORE-200 eXplorerKITでEthernet AVBを動かす DE10-NanoでLinuxを動かす 3340 VCOの設計データを公開する Eurorackのオープンラックケースを作る Eurorack用の簡易電源を作る EurorackにマウントできるVUメータを作る RPi向けビデオデコーダ(ADV7280-M)ブレークアウト基板の設計データを公開する AK4490EQを試す LME49600TS試す ZynqberryでPetaLinux動かす方法をまとめる Lattice iCE40 UltraPlusでGameBoyのROMカートリッジを実装する方法をまとめる GitHub実践入門読む  </description>
     </item>
     
     <item>
       <title>プロフィール</title>
-      <link>https://rniwase.github.io/2020/05/profile/</link>
+      <link>https://rniwase.github.io/page/profile/</link>
       <pubDate>Fri, 08 May 2020 04:09:36 +0900</pubDate>
       
-      <guid>https://rniwase.github.io/2020/05/profile/</guid>
+      <guid>https://rniwase.github.io/page/profile/</guid>
       <description>&lt;h3 id=&#34;名前&#34;&gt;名前&lt;/h3&gt;
 &lt;p&gt;庭瀬稜平&lt;/p&gt;
 &lt;h3 id=&#34;ソーシャル&#34;&gt;ソーシャル&lt;/h3&gt;
