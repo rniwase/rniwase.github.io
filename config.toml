@@ -21,6 +21,8 @@ disqusShortname = "rniwase.github.io"
 # googleAnalytics = "UA-123-45"
 paginate = 7
 canonifyurls = true
+pygmentsUseClasses = true
+# pygmentsCodefences = true
 
 [permalinks]
   post = "/:year/:month/:filename/"
@@ -70,12 +72,12 @@ canonifyurls = true
 #   name = "Archives"
 #   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-archive\"></i>"
 #   url = "/archives"
-# [[menu.main]]
-#   weight = 5
-#   identifier = "about"
-#   name = "About"
-#   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-question\"></i>"
-#   url = "/#about"
+[[menu.main]]
+  weight = 5
+  identifier = "about"
+  name = "About"
+  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-question\"></i>"
+  url = "/page/profile/"
 
 [[menu.links]]
   weight = 1

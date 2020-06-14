@@ -1,13 +1,7 @@
 ---
 title: "プロフィール"
 date: 2020-05-08T04:09:36+09:00
-categories:
-tags:
-keywords:
-comments:       false
-showMeta:       false
-showActions:    false
-#thumbnailImage: //example.com/image.jpg
+draft: false
 ---
 
 ### 名前  
