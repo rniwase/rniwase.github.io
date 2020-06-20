@@ -223,13 +223,13 @@ Starting applications specified in /home/&lt;ユーザ名&gt;/.vnc/xstartup
 Log file is /home/&lt;ユーザ名&gt;/.vnc/&lt;ホスト名&gt;:&lt;ディスプレイ番号&gt;.log</code></pre></div>
 サーバは初回起動時にホームディレクトリ内で<code>.vnc</code>や<code>.Xauthority</code>などのファイルを生成する。
 他にVNCサーバを起動しているユーザがいなければ、ディスプレイ番号は1になる。
-他のユーザが特にディスプレイ番号を指定せずVNCサーバを起動していくと2, 3&hellip;と順番にディスプレイ番号が増える。</p>
+自分または他のユーザが特にディスプレイ番号を指定せずVNCサーバを起動していくと2, 3&hellip;と順番にディスプレイ番号が増える。</p>
 </li>
 <li>
 <p>設定ファイルを編集する
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ vncserver -kill :&lt;ディスプレイ番号&gt;</code></pre></div>
 で一度VNCサーバを閉じて
-<code>~/.vnc/xsetup</code>を次のように編集する（そのままだとアイコンが表示されなかったりする）。
+<code>~/.vnc/xstartup</code>を次のように編集する（そのままだとアイコンが表示されなかったりする）。
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="cp">#!/bin/bash
 </span><span class="cp"></span>xrdb <span class="nv">$HOME</span>/.Xresources
 startxfce4 <span class="p">&amp;</span></code></pre></div>
