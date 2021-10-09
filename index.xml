@@ -6,10 +6,19 @@
     <description>Recent content on rniwase.github.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sun, 14 Jun 2020 07:51:50 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 09 Oct 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://rniwase.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>個人的ヘッドレス Ubuntu Server 20.04 構築メモ</title>
+      <link>https://rniwase.github.io/2021/10/setup-ubuntu-for-headless/</link>
+      <pubDate>Sat, 09 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://rniwase.github.io/2021/10/setup-ubuntu-for-headless/</guid>
+      <description>&lt;p&gt;FPGAや組み込みシステムの開発向けに構築したUbuntu Serverの構築手順メモ。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>VNCサーバ設定と接続手順</title>
@@ -147,6 +156,11 @@
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;アルバイト - 株式会社イーツリーズ・ジャパン&lt;/td&gt;
 &lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2021-07&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;技術補佐員 - 筑波大学&lt;/td&gt;
+&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;h3 id=&#34;受賞歴&#34;&gt;受賞歴&lt;/h3&gt;
@@ -161,6 +175,10 @@
 &lt;tr&gt;
 &lt;td&gt;2016-03&lt;/td&gt;
 &lt;td&gt;平成27年度 電気学会・電子情報通信学会・情報処理学会 四国支部奨励賞&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2021-09&lt;/td&gt;
+&lt;td&gt;リコンフィギャラブルシステム研究会 優秀講演賞(企業部門)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;

@@ -8,581 +8,25 @@
 <meta name="generator" content="Hugo 0.68.3 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Ryohei Niwase">
 <meta name="keywords" content="">
-<meta name="description" content="名前
-庭瀬稜平
-ソーシャル
+<meta name="description" content="FPGAや組み込みシステムの開発向けに構築したUbuntu Serverの構築手順メモ。">
 
 
-
-
-
-
-
-
-
-github
-rniwase
-
-
-twitter
-@root_ab
-
-
-bitcoin
-16LErhS9SY8vbGP5kTL95EVibG449DwKEx
-
-
-
-資格
-
-第一種運転免許 (準中型 5t限定, 普自二)
-危険物取扱者 乙種4類
-基本情報技術者
-
-スキル
-ハードウェア
-
-JIS 機械製図
-2D CAD (Jwcad)
-3D CAD CAE (SolidWorks)
-PCB設計 (KiCAD EDA)
-
-プログラミング
-
-Python
-C
-Verilog HDL
-
-学歴
-
-
-
-since
-until
-
-
-
-
-
-2011-04
-2016-03
-準学士 - 香川高等専門学校 機械電子工学科
-
-
-2016-04
-2018-03
-学士 (工学) - 香川高等専門学校 専攻科 創造工学専攻
-
-
-2020-04
-
-筑波大学 理工情報生命学術院 システム情報工学研究群 博士前期課程
-
-
-
-職歴
-
-
-
-since
-until
-
-
-
-
-
-2012-06
-2014-12
-コンビニ店員
-
-
-2015-03
-2017-12
-舞台照明設営・雑務 - MeW Lighting Office
-
-
-2016-04
-2018-03
-受付・事務 - 香川高専 高松図書館
-
-
-2018-04
-2018-12
-ハードウェア開発 - 株式会社パル技研
-
-
-2019-04
-2020-03
-ハードウェア・ソフトウェア開発 - 株式会社イーツリーズ・ジャパン
-
-
-2020-09
-
-アルバイト - 株式会社イーツリーズ・ジャパン
-
-
-2021-07
-
-技術補佐員 - 筑波大学
-
-
-
-受賞歴
-
-
-
-date
-
-
-
-
-
-2016-03
-平成27年度 電気学会・電子情報通信学会・情報処理学会 四国支部奨励賞
-
-
-2021-09
-リコンフィギャラブルシステム研究会 優秀講演賞(企業部門)
-
-
-
-Thanks
-Thank you for drawing my avatar image. Di-ma(@analog_2p)">
-
-
-<meta property="og:description" content="名前
-庭瀬稜平
-ソーシャル
-
-
-
-
-
-
-
-
-
-github
-rniwase
-
-
-twitter
-@root_ab
-
-
-bitcoin
-16LErhS9SY8vbGP5kTL95EVibG449DwKEx
-
-
-
-資格
-
-第一種運転免許 (準中型 5t限定, 普自二)
-危険物取扱者 乙種4類
-基本情報技術者
-
-スキル
-ハードウェア
-
-JIS 機械製図
-2D CAD (Jwcad)
-3D CAD CAE (SolidWorks)
-PCB設計 (KiCAD EDA)
-
-プログラミング
-
-Python
-C
-Verilog HDL
-
-学歴
-
-
-
-since
-until
-
-
-
-
-
-2011-04
-2016-03
-準学士 - 香川高等専門学校 機械電子工学科
-
-
-2016-04
-2018-03
-学士 (工学) - 香川高等専門学校 専攻科 創造工学専攻
-
-
-2020-04
-
-筑波大学 理工情報生命学術院 システム情報工学研究群 博士前期課程
-
-
-
-職歴
-
-
-
-since
-until
-
-
-
-
-
-2012-06
-2014-12
-コンビニ店員
-
-
-2015-03
-2017-12
-舞台照明設営・雑務 - MeW Lighting Office
-
-
-2016-04
-2018-03
-受付・事務 - 香川高専 高松図書館
-
-
-2018-04
-2018-12
-ハードウェア開発 - 株式会社パル技研
-
-
-2019-04
-2020-03
-ハードウェア・ソフトウェア開発 - 株式会社イーツリーズ・ジャパン
-
-
-2020-09
-
-アルバイト - 株式会社イーツリーズ・ジャパン
-
-
-2021-07
-
-技術補佐員 - 筑波大学
-
-
-
-受賞歴
-
-
-
-date
-
-
-
-
-
-2016-03
-平成27年度 電気学会・電子情報通信学会・情報処理学会 四国支部奨励賞
-
-
-2021-09
-リコンフィギャラブルシステム研究会 優秀講演賞(企業部門)
-
-
-
-Thanks
-Thank you for drawing my avatar image. Di-ma(@analog_2p)">
+<meta property="og:description" content="FPGAや組み込みシステムの開発向けに構築したUbuntu Serverの構築手順メモ。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="プロフィール">
-<meta name="twitter:title" content="プロフィール">
-<meta property="og:url" content="https://rniwase.github.io/page/profile/">
-<meta property="twitter:url" content="https://rniwase.github.io/page/profile/">
+<meta property="og:title" content="個人的ヘッドレス Ubuntu Server 20.04 構築メモ">
+<meta name="twitter:title" content="個人的ヘッドレス Ubuntu Server 20.04 構築メモ">
+<meta property="og:url" content="https://rniwase.github.io/2021/10/setup-ubuntu-for-headless/">
+<meta property="twitter:url" content="https://rniwase.github.io/2021/10/setup-ubuntu-for-headless/">
 <meta property="og:site_name" content="rniwase.github.io">
-<meta property="og:description" content="名前
-庭瀬稜平
-ソーシャル
-
-
-
-
-
-
-
-
-
-github
-rniwase
-
-
-twitter
-@root_ab
-
-
-bitcoin
-16LErhS9SY8vbGP5kTL95EVibG449DwKEx
-
-
-
-資格
-
-第一種運転免許 (準中型 5t限定, 普自二)
-危険物取扱者 乙種4類
-基本情報技術者
-
-スキル
-ハードウェア
-
-JIS 機械製図
-2D CAD (Jwcad)
-3D CAD CAE (SolidWorks)
-PCB設計 (KiCAD EDA)
-
-プログラミング
-
-Python
-C
-Verilog HDL
-
-学歴
-
-
-
-since
-until
-
-
-
-
-
-2011-04
-2016-03
-準学士 - 香川高等専門学校 機械電子工学科
-
-
-2016-04
-2018-03
-学士 (工学) - 香川高等専門学校 専攻科 創造工学専攻
-
-
-2020-04
-
-筑波大学 理工情報生命学術院 システム情報工学研究群 博士前期課程
-
-
-
-職歴
-
-
-
-since
-until
-
-
-
-
-
-2012-06
-2014-12
-コンビニ店員
-
-
-2015-03
-2017-12
-舞台照明設営・雑務 - MeW Lighting Office
-
-
-2016-04
-2018-03
-受付・事務 - 香川高専 高松図書館
-
-
-2018-04
-2018-12
-ハードウェア開発 - 株式会社パル技研
-
-
-2019-04
-2020-03
-ハードウェア・ソフトウェア開発 - 株式会社イーツリーズ・ジャパン
-
-
-2020-09
-
-アルバイト - 株式会社イーツリーズ・ジャパン
-
-
-2021-07
-
-技術補佐員 - 筑波大学
-
-
-
-受賞歴
-
-
-
-date
-
-
-
-
-
-2016-03
-平成27年度 電気学会・電子情報通信学会・情報処理学会 四国支部奨励賞
-
-
-2021-09
-リコンフィギャラブルシステム研究会 優秀講演賞(企業部門)
-
-
-
-Thanks
-Thank you for drawing my avatar image. Di-ma(@analog_2p)">
-<meta name="twitter:description" content="名前
-庭瀬稜平
-ソーシャル
-
-
-
-
-
-
-
-
-
-github
-rniwase
-
-
-twitter
-@root_ab
-
-
-bitcoin
-16LErhS9SY8vbGP5kTL95EVibG449DwKEx
-
-
-
-資格
-
-第一種運転免許 (準中型 5t限定, 普自二)
-危険物取扱者 乙種4類
-基本情報技術者
-
-スキル
-ハードウェア
-
-JIS 機械製図
-2D CAD (Jwcad)
-3D CAD CAE (SolidWorks)
-PCB設計 (KiCAD EDA)
-
-プログラミング
-
-Python
-C
-Verilog HDL
-
-学歴
-
-
-
-since
-until
-
-
-
-
-
-2011-04
-2016-03
-準学士 - 香川高等専門学校 機械電子工学科
-
-
-2016-04
-2018-03
-学士 (工学) - 香川高等専門学校 専攻科 創造工学専攻
-
-
-2020-04
-
-筑波大学 理工情報生命学術院 システム情報工学研究群 博士前期課程
-
-
-
-職歴
-
-
-
-since
-until
-
-
-
-
-
-2012-06
-2014-12
-コンビニ店員
-
-
-2015-03
-2017-12
-舞台照明設営・雑務 - MeW Lighting Office
-
-
-2016-04
-2018-03
-受付・事務 - 香川高専 高松図書館
-
-
-2018-04
-2018-12
-ハードウェア開発 - 株式会社パル技研
-
-
-2019-04
-2020-03
-ハードウェア・ソフトウェア開発 - 株式会社イーツリーズ・ジャパン
-
-
-2020-09
-
-アルバイト - 株式会社イーツリーズ・ジャパン
-
-
-2021-07
-
-技術補佐員 - 筑波大学
-
-
-
-受賞歴
-
-
-
-date
-
-
-
-
-
-2016-03
-平成27年度 電気学会・電子情報通信学会・情報処理学会 四国支部奨励賞
-
-
-2021-09
-リコンフィギャラブルシステム研究会 優秀講演賞(企業部門)
-
-
-
-Thanks
-Thank you for drawing my avatar image. Di-ma(@analog_2p)">
+<meta property="og:description" content="FPGAや組み込みシステムの開発向けに構築したUbuntu Serverの構築手順メモ。">
+<meta name="twitter:description" content="FPGAや組み込みシステムの開発向けに構築したUbuntu Serverの構築手順メモ。">
 <meta property="og:locale" content="ja">
 
   
-    <meta property="article:published_time" content="2020-05-08T04:09:36">
+    <meta property="article:published_time" content="2021-10-09T00:00:00">
   
   
-    <meta property="article:modified_time" content="2020-05-08T04:09:36">
+    <meta property="article:modified_time" content="2021-10-09T00:00:00">
   
   
   
@@ -605,14 +49,14 @@ Thank you for drawing my avatar image. Di-ma(@analog_2p)">
   <meta property="twitter:image" content="https://rniwase.github.io/avatar.jpg">
 
 
-    <title>プロフィール</title>
+    <title>個人的ヘッドレス Ubuntu Server 20.04 構築メモ</title>
 
     <link rel="icon" href="https://rniwase.github.io/favicon.png">
     
 
     
 
-    <link rel="canonical" href="https://rniwase.github.io/page/profile/">
+    <link rel="canonical" href="https://rniwase.github.io/2021/10/setup-ubuntu-for-headless/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -722,19 +166,19 @@ Thank you for drawing my avatar image. Di-ma(@analog_2p)">
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      プロフィール
+      個人的ヘッドレス Ubuntu Server 20.04 構築メモ
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2020-05-08T04:09:36&#43;09:00">
+      <time itemprop="datePublished" datetime="2021-10-09T00:00:00Z">
         
   
   
   
   
-    2020-05-08
+    2021-10-09
   
 
       </time>
@@ -746,146 +190,72 @@ Thank you for drawing my avatar image. Di-ma(@analog_2p)">
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <h3 id="名前">名前</h3>
-<p>庭瀬稜平</p>
-<h3 id="ソーシャル">ソーシャル</h3>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>github</td>
-<td><a href="https://github.com/rniwase">rniwase</a></td>
-</tr>
-<tr>
-<td>twitter</td>
-<td><a href="https://twitter.com/root_ab">@root_ab</a></td>
-</tr>
-<tr>
-<td>bitcoin</td>
-<td>16LErhS9SY8vbGP5kTL95EVibG449DwKEx</td>
-</tr>
-</tbody>
-</table>
-<h3 id="資格">資格</h3>
+              <p>FPGAや組み込みシステムの開発向けに構築したUbuntu Serverの構築手順メモ。</p>
+<h3 id="osインストールの注意点">OSインストールの注意点</h3>
 <ul>
-<li>第一種運転免許 (準中型 5t限定, 普自二)</li>
-<li>危険物取扱者 乙種4類</li>
-<li>基本情報技術者</li>
+<li>必要な場合、固定IPアドレスを割り当てる。</li>
+<li>インストール先のボリューム選択時にデフォルトでLVMが有効になっているので無効にする。</li>
+<li>opensshの公開鍵はGitHubアカウントから取得する仕組みがあるので利用すると便利。</li>
 </ul>
-<h3 id="スキル">スキル</h3>
-<h5 id="ハードウェア">ハードウェア</h5>
+<h3 id="アップデートと不要なパッケージの削除">アップデートと不要なパッケージの削除</h3>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ sudo apt update <span class="o">&amp;&amp;</span> sudo apt upgrade
+$ sudo apt purge plymouth cloud-init apport*
+$ sudo apt --purge autoremove</code></pre></div>
 <ul>
-<li>JIS 機械製図</li>
-<li>2D CAD (Jwcad)</li>
-<li>3D CAD CAE (SolidWorks)</li>
-<li>PCB設計 (KiCAD EDA)</li>
+<li>plymouth &hellip; 起動スプラッシュとかを出す仕組み。</li>
+<li>cloud-init &hellip; IaaS向けに仮想マシンの初期設定を自動化するための仕組み。</li>
+<li>apport* &hellip; クラッシュレポートをカノニカルに送信する仕組み。</li>
 </ul>
-<h5 id="プログラミング">プログラミング</h5>
-<ul>
-<li>Python</li>
-<li>C</li>
-<li>Verilog HDL</li>
-</ul>
-<h3 id="学歴">学歴</h3>
-<table>
-<thead>
-<tr>
-<th>since</th>
-<th>until</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>2011-04</td>
-<td>2016-03</td>
-<td>準学士 - 香川高等専門学校 機械電子工学科</td>
-</tr>
-<tr>
-<td>2016-04</td>
-<td>2018-03</td>
-<td>学士 (工学) - 香川高等専門学校 専攻科 創造工学専攻</td>
-</tr>
-<tr>
-<td>2020-04</td>
-<td></td>
-<td>筑波大学 理工情報生命学術院 システム情報工学研究群 博士前期課程</td>
-</tr>
-</tbody>
-</table>
-<h3 id="職歴">職歴</h3>
-<table>
-<thead>
-<tr>
-<th>since</th>
-<th>until</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>2012-06</td>
-<td>2014-12</td>
-<td>コンビニ店員</td>
-</tr>
-<tr>
-<td>2015-03</td>
-<td>2017-12</td>
-<td>舞台照明設営・雑務 - MeW Lighting Office</td>
-</tr>
-<tr>
-<td>2016-04</td>
-<td>2018-03</td>
-<td>受付・事務 - 香川高専 高松図書館</td>
-</tr>
-<tr>
-<td>2018-04</td>
-<td>2018-12</td>
-<td>ハードウェア開発 - 株式会社パル技研</td>
-</tr>
-<tr>
-<td>2019-04</td>
-<td>2020-03</td>
-<td>ハードウェア・ソフトウェア開発 - 株式会社イーツリーズ・ジャパン</td>
-</tr>
-<tr>
-<td>2020-09</td>
-<td></td>
-<td>アルバイト - 株式会社イーツリーズ・ジャパン</td>
-</tr>
-<tr>
-<td>2021-07</td>
-<td></td>
-<td>技術補佐員 - 筑波大学</td>
-</tr>
-</tbody>
-</table>
-<h3 id="受賞歴">受賞歴</h3>
-<table>
-<thead>
-<tr>
-<th>date</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>2016-03</td>
-<td>平成27年度 電気学会・電子情報通信学会・情報処理学会 四国支部奨励賞</td>
-</tr>
-<tr>
-<td>2021-09</td>
-<td>リコンフィギャラブルシステム研究会 優秀講演賞(企業部門)</td>
-</tr>
-</tbody>
-</table>
-<h3 id="thanks">Thanks</h3>
-<p>Thank you for drawing my avatar image. <a href="https://twitter.com/analog_2p">Di-ma(@analog_2p)</a></p>
+<h3 id="起動時のネットワーク接続待ちの無効化">起動時のネットワーク接続待ちの無効化</h3>
+<p>ネットワークI/Fが有効だけど未接続の場合、networkdがOS起動時に接続待ちになるのでこれを無効化する。
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ sudo systemctl disable systemd-networkd-wait-online.service
+$ sudo systemctl mask systemd-networkd-wait-online.service</code></pre></div></p>
+<h3 id="xfce4とtigervncの導入">xfce4とtigervncの導入</h3>
+<p>FPGAの開発環境はGUIを使う場合が多いので、VNCでリモートデスクトップ環境を構築する。</p>
+<ol>
+<li>
+<p>環境のインストール
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ sudo apt install xfce4 xfce4-goodies tigervnc-common tigervnc-standalone-server tigervnc-xorg-extension firefox</code></pre></div></p>
+</li>
+<li>
+<p>VNC接続パスワードの設定
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ vncpasswd
+Password:
+Verify:
+Would you like to enter a view-only password <span class="o">(</span>y/n<span class="o">)</span>? n</code></pre></div></p>
+</li>
+<li>
+<p>xstartupの設定
+~/.vnc/xstartupに次のスクリプトを入力して保存する。
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="cp">#!/bin/bash
+</span><span class="cp"></span>xrdb <span class="nv">$HOME</span>/.Xresources
+<span class="nb">exec</span> xfce4-session <span class="p">&amp;</span></code></pre></div></p>
+</li>
+<li>
+<p>VNCサーバの起動
+以下のコマンドでVNCサーバを起動する。
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ vncserver -localhost no -SecurityTypes VncAuth,TLSVnc -geometry 1920x1080 -depth <span class="m">24</span></code></pre></div>
+起動中のセッション・ポート番号・ディスプレイ番号の確認
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ vncserver -list
+
+TigerVNC server sessions:
+
+X DISPLAY <span class="c1">#     RFB PORT #      PROCESS ID</span>
+:1              <span class="m">5901</span>            <span class="m">75572</span></code></pre></div>
+サーバーの切断は以下のコマンドの通り。
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ vncserver -kill :&lt;ディスプレイ番号&gt;</code></pre></div></p>
+</li>
+</ol>
+<h3 id="シリアルコンソールにログインプロンプトを表示させる">シリアルコンソールにログインプロンプトを表示させる</h3>
+<p>PCにシリアルポートがあり、OSから/dev/ttyS*が見える場合はシリアルコンソールを有効にできる(USBシリアル変換の場合は/dev/ttyUSB*)。
+グラフィック出力がなく、SSHサーバが死んでネットワークからログインが不能となった場合に使える。</p>
+<p>管理者権限で/etc/default/grubの10行目を次のように編集する。
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nv">GRUB_CMDLINE_LINUX_DEFAULT</span><span class="o">=</span><span class="s2">&#34;console=ttyS0,115200n8&#34;</span></code></pre></div>
+上記の場合は/dev/ttyS0、ボーレート115200baudという設定。<br>
+以下コマンドで設定を適用して再起動。
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ sudo update-grub
+$ sudo reboot</code></pre></div></p>
+<p>Ubuntu Serverのインストールディスクのカーネルコマンドラインを上のように編集しておくと、OSのインストール自体もシリアルコンソール経由で可能になる。起動ディスクが内臓ストレージではなくインストールディスクになっている時は有用。</p>
               
             </div>
           </div>
@@ -900,7 +270,7 @@ Thank you for drawing my avatar image. Di-ma(@analog_2p)">
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://rniwase.github.io/page/todolist/" data-tooltip="Todoリスト">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">次</span>
@@ -908,7 +278,7 @@ Thank you for drawing my avatar image. Di-ma(@analog_2p)">
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--disabled">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://rniwase.github.io/2020/06/how-to-setup-vnc/" data-tooltip="VNCサーバ設定と接続手順">
               
                   <span class="hide-xs hide-sm text-small icon-mr">前</span>
                   <i class="fa fa-angle-right"></i>
@@ -926,19 +296,19 @@ Thank you for drawing my avatar image. Di-ma(@analog_2p)">
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://rniwase.github.io/page/profile/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://rniwase.github.io/2021/10/setup-ubuntu-for-headless/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://rniwase.github.io/page/profile/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://rniwase.github.io/2021/10/setup-ubuntu-for-headless/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://rniwase.github.io/page/profile/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://rniwase.github.io/2021/10/setup-ubuntu-for-headless/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -986,7 +356,7 @@ Thank you for drawing my avatar image. Di-ma(@analog_2p)">
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://rniwase.github.io/page/todolist/" data-tooltip="Todoリスト">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">次</span>
@@ -994,7 +364,7 @@ Thank you for drawing my avatar image. Di-ma(@analog_2p)">
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--disabled">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://rniwase.github.io/2020/06/how-to-setup-vnc/" data-tooltip="VNCサーバ設定と接続手順">
               
                   <span class="hide-xs hide-sm text-small icon-mr">前</span>
                   <i class="fa fa-angle-right"></i>
@@ -1012,19 +382,19 @@ Thank you for drawing my avatar image. Di-ma(@analog_2p)">
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://rniwase.github.io/page/profile/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://rniwase.github.io/2021/10/setup-ubuntu-for-headless/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://rniwase.github.io/page/profile/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://rniwase.github.io/2021/10/setup-ubuntu-for-headless/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://rniwase.github.io/page/profile/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://rniwase.github.io/2021/10/setup-ubuntu-for-headless/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -1054,19 +424,19 @@ Thank you for drawing my avatar image. Di-ma(@analog_2p)">
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Frniwase.github.io%2Fpage%2Fprofile%2F">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Frniwase.github.io%2F2021%2F10%2Fsetup-ubuntu-for-headless%2F">
           <i class="fa fa-facebook-official"></i><span>Facebookで共有</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Frniwase.github.io%2Fpage%2Fprofile%2F">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Frniwase.github.io%2F2021%2F10%2Fsetup-ubuntu-for-headless%2F">
           <i class="fa fa-twitter"></i><span>Twitterで共有</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Frniwase.github.io%2Fpage%2Fprofile%2F">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Frniwase.github.io%2F2021%2F10%2Fsetup-ubuntu-for-headless%2F">
           <i class="fa fa-google-plus"></i><span>Google&#43;で共有</span>
         </a>
       </li>
@@ -1158,9 +528,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/rniwase.github.io\/page\/profile\/';
+          this.page.url = 'https:\/\/rniwase.github.io\/2021\/10\/setup-ubuntu-for-headless\/';
           
-            this.page.identifier = '\/page\/profile\/'
+            this.page.identifier = '\/2021\/10\/setup-ubuntu-for-headless\/'
           
         };
         (function() {
