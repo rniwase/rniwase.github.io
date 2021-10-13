@@ -45,7 +45,7 @@ Verify:
 Would you like to enter a view-only password (y/n)? n
 {{< / highlight >}}
 
-3. xstartupの設定
+3. xstartupの設定  
 ~/.vnc/xstartupに次のスクリプトを入力して保存する。
 {{< highlight shell >}}
 #!/bin/bash
