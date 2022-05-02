@@ -27,50 +27,17 @@
       
       <guid>https://rniwase.github.io/page/profile/</guid>
       <description>&lt;h3 id=&#34;名前&#34;&gt;名前&lt;/h3&gt;
-&lt;p&gt;庭瀬稜平&lt;/p&gt;
-&lt;h3 id=&#34;ソーシャル&#34;&gt;ソーシャル&lt;/h3&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;&lt;/th&gt;
-&lt;th&gt;&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;github&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/rniwase&#34;&gt;rniwase&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;twitter&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://twitter.com/root_ab&#34;&gt;@root_ab&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;bitcoin&lt;/td&gt;
-&lt;td&gt;16LErhS9SY8vbGP5kTL95EVibG449DwKEx&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
+&lt;p&gt;庭瀬 稜平 (NIWASE Ryohei)&lt;/p&gt;
 &lt;h3 id=&#34;資格&#34;&gt;資格&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;第一種運転免許 (準中型 5t限定, 普自二)&lt;/li&gt;
 &lt;li&gt;危険物取扱者 乙種4類&lt;/li&gt;
 &lt;li&gt;基本情報技術者&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;スキル&#34;&gt;スキル&lt;/h3&gt;
-&lt;h5 id=&#34;ハードウェア&#34;&gt;ハードウェア&lt;/h5&gt;
-&lt;ul&gt;
-&lt;li&gt;JIS 機械製図&lt;/li&gt;
-&lt;li&gt;2D CAD (Jwcad)&lt;/li&gt;
-&lt;li&gt;3D CAD CAE (SolidWorks)&lt;/li&gt;
-&lt;li&gt;PCB設計 (KiCAD EDA)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h5 id=&#34;プログラミング&#34;&gt;プログラミング&lt;/h5&gt;
-&lt;ul&gt;
-&lt;li&gt;Python&lt;/li&gt;
-&lt;li&gt;C&lt;/li&gt;
-&lt;li&gt;Verilog HDL&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h3 id=&#34;関心&#34;&gt;関心&lt;/h3&gt;
+&lt;p&gt;FPGA、コンピュータハードウェア、計測制御、電子音楽&lt;/p&gt;
+&lt;h3 id=&#34;よく触るもの&#34;&gt;よく触るもの&lt;/h3&gt;
+&lt;p&gt;Jwcad、KiCAD EDA、Python、C、Verilog HDL&lt;/p&gt;
 &lt;h3 id=&#34;学歴&#34;&gt;学歴&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -93,8 +60,13 @@
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2020-04&lt;/td&gt;
+&lt;td&gt;2022-03&lt;/td&gt;
+&lt;td&gt;修士 (工学) - 筑波大学 理工情報生命学術院 博士前期課程&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2022-04&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
-&lt;td&gt;筑波大学 理工情報生命学術院 システム情報工学研究群 博士前期課程&lt;/td&gt;
+&lt;td&gt;筑波大学 理工情報生命学術院 システム情報工学研究群 博士後期課程&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -140,8 +112,8 @@
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2021-07&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;技術補佐員 - 筑波大学&lt;/td&gt;
+&lt;td&gt;2021-12&lt;/td&gt;
+&lt;td&gt;技術補佐員 - 筑波大学 計算科学研究センター&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -163,9 +135,7 @@
 &lt;td&gt;リコンフィギャラブルシステム研究会 優秀講演賞(企業部門)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h3 id=&#34;thanks&#34;&gt;Thanks&lt;/h3&gt;
-&lt;p&gt;Thank you for drawing my avatar image. &lt;a href=&#34;https://twitter.com/analog_2p&#34;&gt;Di-ma(@analog_2p)&lt;/a&gt;&lt;/p&gt;</description>
+&lt;/table&gt;</description>
     </item>
     
   </channel>

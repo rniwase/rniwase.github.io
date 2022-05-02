@@ -13,19 +13,19 @@
     
     <item>
       <title>個人的ヘッドレス Ubuntu Server 20.04 構築メモ</title>
-      <link>https://rniwase.github.io/2021/10/setup-ubuntu-for-headless/</link>
+      <link>https://rniwase.github.io/post/setup-ubuntu-for-headless/</link>
       <pubDate>Sat, 09 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://rniwase.github.io/2021/10/setup-ubuntu-for-headless/</guid>
+      <guid>https://rniwase.github.io/post/setup-ubuntu-for-headless/</guid>
       <description>&lt;p&gt;FPGAや組み込みシステムの開発向けに構築したUbuntu Serverの構築手順メモ。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>VNCサーバ設定と接続手順</title>
-      <link>https://rniwase.github.io/2020/06/how-to-setup-vnc/</link>
+      <link>https://rniwase.github.io/post/how-to-setup-vnc/</link>
       <pubDate>Sun, 14 Jun 2020 07:51:50 +0900</pubDate>
       
-      <guid>https://rniwase.github.io/2020/06/how-to-setup-vnc/</guid>
+      <guid>https://rniwase.github.io/post/how-to-setup-vnc/</guid>
       <description>&lt;p&gt;ヘッドレス運用の開発マシンをセットアップするとき、VNCサーバの設定方法をよく忘れるのでメモ。&lt;/p&gt;</description>
     </item>
     

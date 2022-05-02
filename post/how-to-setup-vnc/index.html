@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    
+    <script type="application/ld+json">
+
+{  
+  "@context":"http://schema.org",
+  "@type":"Website",
+  "@id":"https:\/\/rniwase.github.io\/",
+  "author": {
+    "@type": "Person",
+    "name": "Ryohei Niwase",
+    
+    "image": "https://rniwase.github.io/avatar.jpg"
+    
+  },
+  "name":"rniwase.github.io",
+  "description":"\x3cp\x3eヘッドレス運用の開発マシンをセットアップするとき、VNCサーバの設定方法をよく忘れるのでメモ。\x3c\/p\x3e",
+  "url":"https:\/\/rniwase.github.io\/post\/how-to-setup-vnc\/",
+  "keywords":"[]"
+}
+
+</script>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.68.3 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="author" content="Ryohei Niwase">
+<meta name="keywords" content="">
+<meta name="description" content="ヘッドレス運用の開発マシンをセットアップするとき、VNCサーバの設定方法をよく忘れるのでメモ。">
+
+
+<meta property="og:description" content="ヘッドレス運用の開発マシンをセットアップするとき、VNCサーバの設定方法をよく忘れるのでメモ。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VNCサーバ設定と接続手順">
+<meta name="twitter:title" content="VNCサーバ設定と接続手順">
+<meta property="og:url" content="https://rniwase.github.io/post/how-to-setup-vnc/">
+<meta property="twitter:url" content="https://rniwase.github.io/post/how-to-setup-vnc/">
+<meta property="og:site_name" content="rniwase.github.io">
+<meta property="og:description" content="ヘッドレス運用の開発マシンをセットアップするとき、VNCサーバの設定方法をよく忘れるのでメモ。">
+<meta name="twitter:description" content="ヘッドレス運用の開発マシンをセットアップするとき、VNCサーバの設定方法をよく忘れるのでメモ。">
+<meta property="og:locale" content="ja">
+
+  
+    <meta property="article:published_time" content="2020-06-14T07:51:50">
+  
+  
+    <meta property="article:modified_time" content="2020-06-14T07:51:50">
+  
+  
+  
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://rniwase.github.io/avatar.jpg">
+  <meta property="twitter:image" content="https://rniwase.github.io/avatar.jpg">
+
+
+
+
+
+
+    <title>VNCサーバ設定と接続手順</title>
+
+    <link rel="icon" href="https://rniwase.github.io/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://rniwase.github.io/post/how-to-setup-vnc/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    
+    <link rel="stylesheet" href="https://rniwase.github.io/css/style-h6ccsoet3mzkbb0wngshlfbaweimexgqcxj0h5hu4h82olsdzz6wmqdkajm.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="6">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://rniwase.github.io/" aria-label="ホームページへ">rniwase.github.io</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://rniwase.github.io/page/profile/" aria-label="リンクを開く: /page/profile/">
+    
+    
+    
+      
+        <img class="header-picture" src="https://rniwase.github.io/avatar.jpg" alt="プロフィール画像" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="6">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://rniwase.github.io/page/profile/" aria-label="著者についてもっと読む">
+          <img class="sidebar-profile-picture" src="https://rniwase.github.io/avatar.jpg" alt="プロフィール画像" />
+        </a>
+        <h4 class="sidebar-profile-name">Ryohei Niwase</h4>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://rniwase.github.io/" title="Home">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-home" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">ホーム</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/rniwase" target="_blank" rel="noopener" title="GitHub">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-github" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="6"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" id="top">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title">
+      VNCサーバ設定と接続手順
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2020-06-14T07:51:50&#43;09:00">
+        
+  
+  
+  
+  
+    2020-06-14
+  
+
+      </time>
+    
+    
+  </div>
+
+</div>
+          
+          <div class="post-content markdown">
+            <div class="main-content-wrap">
+              <p>ヘッドレス運用の開発マシンをセットアップするとき、VNCサーバの設定方法をよく忘れるのでメモ。</p>
+<h3 id="vncサーバ設定">VNCサーバ設定</h3>
+<ul>
+<li>OS: Ubuntu Server 18.04</li>
+</ul>
+<ol>
+<li>
+<p>環境のインストール
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sudo apt update
+$ sudo apt install xfce4 xfce4-goodies tightvncserver firefox</code></pre></div></p>
+</li>
+<li>
+<p>VNC接続パスワードの設定
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ vncpasswd
+Using password file /home/&lt;ユーザ名&gt;/.vnc/passwd
+VNC directory /home/&lt;ユーザ名&gt;/.vnc does not exist, creating.
+Password:
+Verify:
+Would you like to enter a view-only password <span style="color:#f92672">(</span>y/n<span style="color:#f92672">)</span>? n</code></pre></div>
+パスワードは9文字以上だと<code>Warning: password truncated to the length of 8.</code>と表示されて8文字に短縮されるので注意。</p>
+</li>
+<li>
+<p>VNCサーバを起動
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ vncserver
+xauth:  file /home/&lt;ユーザ名&gt;/.Xauthority does not exist
+
+New <span style="color:#e6db74">&#39;X&#39;</span> desktop is &lt;ホスト名&gt;:&lt;ディスプレイ番号&gt;
+
+Creating default startup script /home/&lt;ユーザ名&gt;/.vnc/xstartup
+Starting applications specified in /home/&lt;ユーザ名&gt;/.vnc/xstartup
+Log file is /home/&lt;ユーザ名&gt;/.vnc/&lt;ホスト名&gt;:&lt;ディスプレイ番号&gt;.log</code></pre></div>
+サーバは初回起動時にホームディレクトリ内で<code>.vnc</code>や<code>.Xauthority</code>などのファイルを生成する。
+他にVNCサーバを起動しているユーザがいなければ、ディスプレイ番号は1になる。
+自分または他のユーザが特にディスプレイ番号を指定せずVNCサーバを起動していくと2, 3&hellip;と順番にディスプレイ番号が増える。</p>
+</li>
+<li>
+<p>設定ファイルを編集する
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ vncserver -kill :&lt;ディスプレイ番号&gt;</code></pre></div>
+で一度VNCサーバを閉じて
+<code>~/.vnc/xstartup</code>を次のように編集する（そのままだとアイコンが表示されなかったりする）。
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>xrdb $HOME/.Xresources
+startxfce4 &amp;</code></pre></div>
+再度VNCサーバを起動する。
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ vncserver</code></pre></div></p>
+</li>
+</ol>
+<ul>
+<li>運用方法<br>
+OSを再起動したときユーザは<code>vncserver</code>コマンドを叩いて再度VNCサーバを起動する必要がある。<br>
+画面の解像度と色深度を変更したい場合、以下のようにサーバ起動時に設定する。<br>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ vncserver -depth <span style="color:#ae81ff">24</span> -geometry 1920x1080</code></pre></div></li>
+</ul>
+<h3 id="クライアント接続手順">クライアント接続手順</h3>
+<h6 id="ubuntu-desktop-1804">Ubuntu Desktop 18.04</h6>
+<p><a href="https://remmina.org/">Remmina</a>というリモートデスクトップクライアントが標準でインストールされているのでこれを使う。</p>
+<ol>
+<li>Remminaを起動する。</li>
+<li>＋ボタンを押す</li>
+<li>次のように各項目を設定する。</li>
+</ol>
+<ul>
+<li><code>Name</code> : <code>&lt;適当な表示名&gt;</code></li>
+<li><code>Protocol</code> : <code>VNC - Virtual Network Computing</code></li>
+<li><code>Server</code> : <code>&lt;接続先アドレス&gt;:&lt;ポート番号&gt;</code> (&lt;ポート番号&gt;=5900+&lt;ディスプレイ番号&gt;)<br>
+例 : <code>192.168.1.100:5901</code></li>
+<li><code>User password</code> : <code>&lt;vncpasswdで設定したパスワード&gt;</code></li>
+<li><code>Color depth</code> : <code>True color (24 bpp)</code></li>
+<li><code>Quality</code> : <code>Medium</code></li>
+</ul>
+<ol start="4">
+<li><code>Save and Connect</code>を押す。</li>
+<li>接続が確立するとリモート画面が表示される。<br>
+次回以降は一覧に表示された項目をダブルクリックすると接続できるようになる。</li>
+</ol>
+<h6 id="macos">macOS</h6>
+<p>OS標準のクライアントを使う。</p>
+<ol>
+<li>Finderを開いて、<code>メニュー -&gt; 移動 -&gt; サーバへ接続...</code>を押す。</li>
+<li>サーバアドレスに<code>vnc://&lt;接続先アドレス&gt;:&lt;ポート番号&gt;/</code>を入力して接続を押す(<code>&lt;ポート番号&gt;=5900+&lt;ディスプレイ番号&gt;</code>)。<br>
+例 : <code>vnc://192.168.1.100:5901/</code></li>
+<li>画面共有が起動してパスワードを聞かれるので、<code>vncpasswd</code>で設定したパスワードを入力して接続を押す。</li>
+<li>接続が確立するとリモート画面が表示される。</li>
+</ol>
+<h6 id="windows">Windows</h6>
+<p><a href="https://realvnc.com/en/connect/download/viewer/windows/">RealVNC VNC Viewer</a>を使う。</p>
+<ol>
+<li>VNC Viewerをダウンロードしてインストールする。</li>
+<li>VNC Viewerを起動する。</li>
+<li><code>Enter a VNC Server address or search</code>に<code>&lt;接続先アドレス&gt;:&lt;ポート番号&gt;</code>を入力して接続を押す(<code>&lt;ポート番号&gt;=5900+&lt;ディスプレイ番号&gt;</code>)。<br>
+例 : <code>192.168.1.100:5901</code></li>
+<li><code>Unencrypted connection</code>という警告ウィンドウが出るので<code>Continue</code>を押して続行する。</li>
+<li>パスワードを聞かれるので、<code>vncpasswd</code>で設定したパスワードを入力して<code>OK</code>を押す。</li>
+<li>接続が確立するとリモート画面が表示される。<br>
+次回以降は一覧に表示された項目をダブルクリックすると接続できるようになる。</li>
+</ol>
+<h6 id="初回接続時">初回接続時</h6>
+<p>初回接続時に<code>Welcome to the first start of the panel</code>というウィンドウが表示されるので<code>Use default config</code>を押して閉じる。<br>
+もしWebブラウザ、ターミナルのアイコンを押しても起動しなければ、
+<code>Applications -&gt; Settings -&gt; Preferred Applications</code>を開いて
+<code>Internetタブ -&gt; Web Browser</code>が<code>Mozilla Firefox</code>に、
+<code>Utilitiesタブ -&gt; Terminal Emulator</code>が<code>Xfce Terminal</code>に設定されているか確認する。</p>
+<h4 id="セキュリティについて">セキュリティについて</h4>
+<p>VNCプロトコルでは映像の転送が暗号化されていないので、そのままだと通信内容から映像を傍受できてしまう。
+通信を暗号化するにはSSHのポートフォワーディング機能を使う。</p>
+<p>具体的には、クライアントからサーバに対してSSHでログインできる状態で、
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ ssh &lt;ユーザ名&gt;@&lt;接続先アドレス&gt; -L &lt;ポート番号&gt;:localhost:&lt;ポート番号&gt; -f -N
+例 :
+$ ssh user@192.168.1.100 -L 5901:localhost:5901 -f -N</code></pre></div>
+をターミナルで実行したあとに、VNCクライアントで<code>localhost:&lt;ポート番号&gt;</code>に接続するとVNC over SSHが実現できる。</p>
+<p>VNCクライアントによっては接続時にSSHポートフォワーディングを設定してくれる機能を持つものもある。<br>
+例えば、Remminaだと設定画面の<code>SSH Tunnel</code>タブで</p>
+<ul>
+<li><code>Enable SSH tunnel</code>にチェックを入れる。</li>
+<li><code>SSH Authentication</code>の<code>User name</code>にログインユーザ名を入れる。</li>
+<li>パスワード認証なら<code>Password</code>にチェック、公開鍵認証なら<code>Public key(automatic)</code>にチェックをいれる。</li>
+</ul>
+<p>と設定すると、接続するときに自動的にSSHポートフォワーディングを設定してくれる。</p>
+              
+
+
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+            
+            
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://rniwase.github.io/post/setup-ubuntu-for-headless/" data-tooltip="個人的ヘッドレス Ubuntu Server 20.04 構築メモ" aria-label="次: 個人的ヘッドレス Ubuntu Server 20.04 構築メモ">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">次</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--disabled">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">前</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="この記事を共有する">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://rniwase.github.io/post/how-to-setup-vnc/" title="Facebookで共有" aria-label="Facebookで共有">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://rniwase.github.io/post/how-to-setup-vnc/" title="Twitterで共有" aria-label="Twitterで共有">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://rniwase.github.io/post/how-to-setup-vnc/" title="Linkedinで共有" aria-label="Linkedinで共有">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="トップに戻る">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+            
+  
+
+
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2022 Ryohei Niwase. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="6">
+        
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://rniwase.github.io/post/setup-ubuntu-for-headless/" data-tooltip="個人的ヘッドレス Ubuntu Server 20.04 構築メモ" aria-label="次: 個人的ヘッドレス Ubuntu Server 20.04 構築メモ">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">次</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--disabled">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">前</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="この記事を共有する">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://rniwase.github.io/post/how-to-setup-vnc/" title="Facebookで共有" aria-label="Facebookで共有">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://rniwase.github.io/post/how-to-setup-vnc/" title="Twitterで共有" aria-label="Twitterで共有">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://rniwase.github.io/post/how-to-setup-vnc/" title="Linkedinで共有" aria-label="Linkedinで共有">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="トップに戻る">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+      </div>
+      
+<div id="share-options-bar" class="share-options-bar" data-behavior="6">
+  <i id="btn-close-shareoptions" class="fa fa-times"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Frniwase.github.io%2Fpost%2Fhow-to-setup-vnc%2F" aria-label="Facebookで共有">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i><span>Facebookで共有</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Frniwase.github.io%2Fpost%2Fhow-to-setup-vnc%2F" aria-label="Twitterで共有">
+          <i class="fab fa-twitter" aria-hidden="true"></i><span>Twitterで共有</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Frniwase.github.io%2Fpost%2Fhow-to-setup-vnc%2F" aria-label="Linkedinで共有">
+          <i class="fab fa-linkedin" aria-hidden="true"></i><span>Linkedinで共有</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+
+
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-times"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://rniwase.github.io/avatar.jpg" alt="プロフィール画像" />
+    
+    <h4 id="about-card-name">Ryohei Niwase</h4>
+    
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker-alt"></i>
+        <br/>
+        Japan
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js" integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script src="https://rniwase.github.io/js/script-yqzy9wdlzix4lbbwdnzvwx3egsne77earqmn73v9uno8aupuph8wfguccut.min.js"></script>
+
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-gE8KAQyFIzV1C9+GZ8TKJHZS2s+n7EjNtC+IMRn1l5+WYJTHOODUM6JSjZhFhqXmc7bG8Av6XXpckA4tYhflnw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/apache.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-EWROca+bote+7Oaaar1F6y74iZj1r1F9rm/ly7o+/FwJopbBaWtsFDmaKoZDd3QiGU2pGacBirHJNivmGLYrow==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/go.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-GDVzAn0wpx1yVtQsRWmFc6PhJiLBPdUic+h4GWgljBh904O3JU10fk9EKNpVyIoPqkFn54rgL2QBG4BmUTMpiQ==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/http.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-UgZlma8NzkrDb/NWgmLIcTrH7i/CSnLLDRFqCSNF5NGPpjKmzyM25qcoXGOup8+cDakKyaiTDd7N4dyH4YT+IA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/less.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-lot9koe73sfXIrUvIPM/UEhuMciN56RPyBdOyZgfO53P2lkWyyXN7J+njcxIIBRV+nVDQeiWtiXg+bLAJZDTfg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/nginx.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-Zd3e7XxHP00TD0Imr0PIfeM0fl0v95kMWuhyAS3Wn1UTSXTkz0OhtRgBAr4JlmADRgiXr4x7lpeUdqaGN8xIog==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/puppet.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-qtqDO052iXMSP+5d/aE/jMtL9vIIGvONgTJziC2K/ZIB1yEGa55WVxGE9/08rSQ62EoDifS9SWVGZ7ihSLhzMA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/scss.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-1NmkjnEDnwwwcu28KoQF8vs3oaPFokQHbmbtwGhFfeDsQZtVFI8zW2aE9O8yMYdpdyKV/5blE4pSWw4Z/Sv97w==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/stylus.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-B2wSfruPjr8EJL6IIzQr1eAuDwrsfIfccNf/LCEdxELCgC/S/ZMt/Uvk80aD79m7IqOqW+Sw8nbkvha20yZpzg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/swift.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-28oDiQZGKUVN6wQ7PSLPNipOcmkCALXKwOi7bnkyFf8QiMZQxG9EQoy/iiNx6Zxj2cG2SbVa4dXKigQhu7GiFw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/yaml.min.js"></script>
+  
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+
+
+    
+  </body>
+</html>
+
