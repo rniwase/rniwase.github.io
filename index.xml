@@ -6,10 +6,19 @@
     <description>Recent content on rniwase.github.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sat, 09 Oct 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 03 May 2022 02:03:33 +0900</lastBuildDate>
     
 	<atom:link href="https://rniwase.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Vivado IP IntegratorのBD上にIBERTを追加する</title>
+      <link>https://rniwase.github.io/post/adding-ibert-to-vivado-ipi-bd/</link>
+      <pubDate>Tue, 03 May 2022 02:03:33 +0900</pubDate>
+      
+      <guid>https://rniwase.github.io/post/adding-ibert-to-vivado-ipi-bd/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>個人的ヘッドレス Ubuntu Server 20.04 構築メモ</title>
