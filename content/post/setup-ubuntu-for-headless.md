@@ -36,6 +36,11 @@ FPGAの開発環境はGUIを使う場合が多いので、VNCでリモートデ�
 {{< highlight shell >}}
 $ sudo apt install xfce4 xfce4-goodies tigervnc-common tigervnc-standalone-server tigervnc-xorg-extension firefox
 {{< / highlight >}}
+xfce4のインストール時にディスプレイマネージャとしてgdm3とlighdmのどちらをインストールするか聞かれるので、
+とりあえずlightdmを選択する。ディスプレイマネージャは使わないのでアンインストールする。
+{{< highlight shell >}}
+$ sudo apt purge lightdm
+{{< / highlight >}}
 
 2. VNC接続パスワードの設定
 {{< highlight shell >}}
